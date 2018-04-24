@@ -19,3 +19,4 @@ Route::resource('marketing/producto','ProductoController');
 
 
 Route::resource('marketing/categoria','CategoriaProductoController');
+

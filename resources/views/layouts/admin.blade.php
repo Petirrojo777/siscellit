@@ -162,7 +162,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de Ventas</h3>
+                  <h3 class="box-title">Catalogo de productos</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
@@ -173,8 +173,9 @@
                 <div class="box-body">
                   	<div class="row">
 	                  	<div class="col-md-12">
-		                          <!--Contenido-->
-                             @yield('contenido')
+                      @yield('contenido')
+                              <!--Contenido-->
+                            
 
                                   <!--Fin Contenido-->
                            </div>
@@ -194,7 +195,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="www.incanatoit.com">IncanatoIT</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2018-2019 <a href="www.incanatoit.com">PunchitUP</a>.</strong> All rights reserved.
       </footer>
 
       

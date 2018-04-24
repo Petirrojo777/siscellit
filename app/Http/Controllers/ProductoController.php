@@ -3,6 +3,8 @@
 namespace sisCellit\Http\Controllers;
 
 use Illuminate\Http\Request;
+use sisCellit\Http\Requests;
+use sisCellit\Http\Requests\ProductoFormRequest;
 
 use sisCellit\producto;
 
@@ -22,15 +24,13 @@ class ProductoController extends Controller
 
     public function index(Request $request)
     {
-        //
-        //$producto=producto::orderBy('ID','DESC')->paginate(3);
-        //return view('Producto.index',compact('producto'));
+    
        if ($request)
        {
-            $query=trim($request->get('searchText'));
-            $productos=DB::table('producto')->where('NOM_PROD','LIKE','%'.$query.'%');
+            $productos=DB::table('producto')->paginate(5);
 
-            return view ('marketing.producto.index'); 
+
+            return view ('marketing.producto.listar',["productos"=>$productos]); 
         }
     }
 
@@ -42,7 +42,7 @@ class ProductoController extends Controller
     public function create()
     {
         //
-        return view("Producto.create");
+        return view("marketing.producto.create");
     }
 
     /**
@@ -51,10 +51,18 @@ class ProductoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductoFormRequest $request)
     {
         //
-        
+        $producto = new Producto;
+        $producto->NOM_PROD=$request->get('nombre');
+        $producto->PIC_PROD=$request->get('foto');
+        $producto->PRE_PROD=$request->get('precio');
+        $producto->save();
+
+        return Redirect::to('marketing/producto.listar');
+
+
     }
 
     /**
@@ -66,6 +74,7 @@ class ProductoController extends Controller
     public function show($id)
     {
         //
+        return view("marketing.producto.listar",["producto"=>Producto::findOrFail($id)]);
     }
 
     /**
@@ -76,6 +85,7 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
+        return view("marketing.producto.listar",["producto"=>Producto::findOrFail($id)]);
         //
     }
 
@@ -86,9 +96,16 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductoFormRequest $request, $id)
     {
         //
+        $producto=producto::findOrFail($id);
+        $producto->NOM_PROD=$request->get('nombre');
+        $producto->PIC_PROD=$request->get('foto');
+        $producto->PRE_PROD=$request->get('precio');
+        $producto->update();
+        return Redirect::to('marketing/producto');
+
     }
 
     /**
@@ -100,5 +117,9 @@ class ProductoController extends Controller
     public function destroy($id)
     {
         //
+       $producto=producto::findOrFail($id);
+       $producto->update();
+       return Redirect::to('marketing/producto');
+
     }
 }

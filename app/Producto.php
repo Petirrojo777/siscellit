@@ -16,10 +16,7 @@ class Producto extends Model
     protected $fillable = [
     	'NOM_PROD',
     	'PIC_PROD',
-    	'PRE_PROD',
-    	'MDL_PROD',
-    	'DES_PROD',
-    	'CLR_PROD'
+    	'PRE_PROD'
     ];
 
     protected $guarded = [
