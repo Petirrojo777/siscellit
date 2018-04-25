@@ -91,8 +91,19 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i> Categoria 1</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Categoría 2</a></li>
+                <li class="active"><h2></h2><span class="sr-only">(current)</span></li>
+            <br>
+           <br>
+          <br>
+           <br>
+          <br>
+            <li><a href="audifonos.html">Audifonos</a></span></li>
+            <br>
+            <li><a href="case.html">Case</a></span></li>
+            <br>
+            <li><a href="bolsasacuaticas.html">Bolsas Acuaticas</a></span></li>
+             <br>
+            <li><a href="rightlightselfie.html">Right Light Selfie</a></span></li>
               </ul>
             </li>
             
