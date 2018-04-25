@@ -17,6 +17,13 @@
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
     <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
+    <style type="text/css">
+   {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+</style>
+
 
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -93,10 +100,6 @@
               <ul class="treeview-menu">
                 <li class="active"><h2></h2><span class="sr-only">(current)</span></li>
             <br>
-           <br>
-          <br>
-           <br>
-          <br>
             <li><a href="audifonos.html">Audifonos</a></span></li>
             <br>
             <li><a href="case.html">Case</a></span></li>
