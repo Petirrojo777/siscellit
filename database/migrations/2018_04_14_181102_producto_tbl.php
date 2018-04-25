@@ -17,7 +17,7 @@ class ProductoTbl extends Migration
         Schema::create('producto', function (Blueprint $product){
         $product->increments('ID_PROD');
         $product->string('NOM_PROD',45);
-        $product->binary('PIC_PROD');
+        $product->string('PIC_PROD');
         $product->decimal('PRE_PROD',7,2);
         $product->string('MDL_PROD',45);
         $product->string('DES_PROD',255);

@@ -12,21 +12,20 @@
 					<thead>
 						<tr>
 							<th>ID</th>
-							<th>Nombre</th>
-							<th>Foto</th>
-							<th>Precio</th>
+							<th>NOMBRE</th>
+							<th>FOTO</th>
+							<th>PRECIO</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach($productos as $item)
 						<tr>
-							<td>{{$item->ID_PROD}}</td>
-							<td>{{$item->NOM_PROD}}</td>
-							<td>{{$item->PIC_PROD}}</td>
-							<td>{{$item->PRE_PROD}}</td>
+							<td>{{$item->ID_PRODUCTO}}</td>
+							<td>{{$item->NO_PRODUCTO}}</td>
+							<td><img src={{$item->PIC_PRODUCTO}} alt="Logo"></td>
+							<td>{{$item->PRE_PRODUCTO}}</td>
 							<td>
-								<a href=""><button class="btn btn-info">Editar</button>
-								<a href=""><button class="btn btn-danger">Eliminar</button>
+								<a href=""><button class="btn btn-info">Agregar al carrito</button>
 							</td>
 						</tr>
 						@endforeach

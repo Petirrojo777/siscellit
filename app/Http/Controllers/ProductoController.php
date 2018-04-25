@@ -27,10 +27,10 @@ class ProductoController extends Controller
     
        if ($request)
        {
-            $productos=DB::table('producto')->paginate(5);
+            $productos=DB::table('CIT_PRODUCTO')->paginate(5);
 
 
-            return view ('marketing.producto.listar',["productos"=>$productos]); 
+            return view ('marketing.producto.otrolistar',["productos"=>$productos]); 
         }
     }
 
