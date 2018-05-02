@@ -18,11 +18,14 @@
     <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
     <style type="text/css">
-   {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-</style>
+          .jumbotron {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+          .thumbnail{
+            height: 400px;
+          }
+        </style>
 
 
   </head>
@@ -51,36 +54,27 @@
               <!-- Messages: style can be found in dropdown.less-->
               
               <!-- User Account: style can be found in dropdown.less -->
-              <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Milagros Villena</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-                    
-                    <p>
-                      https://www.facebook.com/Tecnología-de-Información-Abierta-Open-TI-1009101195786547 - Impulso Tecnologico
-                      <small>https://www.youtube.com/watch?v=M4ZoCHID9GI</small>
-                    </p>
-                  </li>
-                  
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-                    
-                    <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
-                    </div>
-                  </li>
-                </ul>
-              </li>
+            <div class="container-fluid">
+            <div class="text-center">
+              <form class="navbar-form navbar-center" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+               </div>
+              <button type="submit" class="btn btn-default">Buscar</button>
+                </form>
+              </div>
+         </div>
+          <ul class="nav navbar-nav navbar-rigth">
+        <li><a href="logueo.html">Logueo</a></li>
+      </ul>
               
             </ul>
           </div>
 
         </nav>
       </header>
+
+
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
@@ -99,7 +93,6 @@
               </a>
               <ul class="treeview-menu">
                 <li class="active"><h2></h2><span class="sr-only">(current)</span></li>
-            <br>
             <li><a href="audifonos.html">Audifonos</a></span></li>
             <br>
             <li><a href="case.html">Case</a></span></li>
