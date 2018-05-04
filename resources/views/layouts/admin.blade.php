@@ -54,16 +54,7 @@
               <!-- Messages: style can be found in dropdown.less-->
               
               <!-- User Account: style can be found in dropdown.less -->
-            <div class="container-fluid">
-            <div class="text-center">
-              <form class="navbar-form navbar-center" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-               </div>
-              <button type="submit" class="btn btn-default">Buscar</button>
-                </form>
-              </div>
-         </div>
+            
           <ul class="nav navbar-nav navbar-rigth">
         <li><a href="logueo.html">Logueo</a></li>
       </ul>
@@ -150,6 +141,7 @@
               <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Catalogo de productos</h3>
+                  
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     

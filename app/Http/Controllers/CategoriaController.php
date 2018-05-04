@@ -3,36 +3,30 @@
 namespace sisCellit\Http\Controllers;
 
 use Illuminate\Http\Request;
-use sisCellit\Http\Requests;
-use sisCellit\Http\Requests\ProductoFormRequest;
+
+use sisCellit\Categoria;
 use Illuminate\Support\Facades\Redirect;
-
-use sisCellit\Producto;
-
+use sisCellit\Http\Requests\CategoriaFormRequest;
 use DB;
 
-class ProductoController extends Controller
+
+class CategoriaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    //
     public function __construct()
     {
-        /**
-     * Para Validar
-    */
+
     }
-    public function index(Request $request){
-            
-          if ($request)
+
+    public function index(Request $request)
+    {
+    
+       if ($request)
        {
-            $query=trim($request->get('searchText'));
-            $productos=DB::table('CIT_PRODUCTO')->where('NO_PRODUCTO','LIKE','%'.$query.'%')->paginate(3);
+            $productos=DB::table('CIT_CATEGORIA_PROD')->paginate(5);
 
 
-            return view ('marketing.producto.otrolistar',["productos"=>$productos,"searchText"=>$query]); 
+            return view ('marketing.producto.listarcat'); 
         }
     }
 
@@ -87,7 +81,7 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        return view("marketing.producto.editar",["producto"=>Producto::findOrFail($id)]);
+        return view("marketing.producto.listar",["producto"=>Producto::findOrFail($id)]);
         //
     }
 
@@ -101,7 +95,7 @@ class ProductoController extends Controller
     public function update(ProductoFormRequest $request, $id)
     {
         //
-        $producto=Producto::findOrFail($id);
+        $producto=producto::findOrFail($id);
         $producto->NOM_PROD=$request->get('nombre');
         $producto->PIC_PROD=$request->get('foto');
         $producto->PRE_PROD=$request->get('precio');
@@ -124,4 +118,5 @@ class ProductoController extends Controller
        return Redirect::to('marketing/producto');
 
     }
+
 }

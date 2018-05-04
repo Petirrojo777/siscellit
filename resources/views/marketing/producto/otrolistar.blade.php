@@ -6,6 +6,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Productos</div>
+				@include('marketing.producto.busqueda')
 
 				<div class="panel-body">
 
@@ -23,6 +24,9 @@
 
 											<div class="col-xs-12 col-md-6">
 												<a class="btn btn-success" href="#">Agregar al carrito</a>
+											</div>
+											<div class="col-xs-12 col-md-6">
+												<a class="btn btn-success" href="#">Detalle del producto</a>
 											</div>
 										</div>
 								</div>
